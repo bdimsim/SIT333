@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: sit333_week3.DateUtilTest
+-------------------------------------------------------------------------------
+Tests run: 33, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.124 s <<< FAILURE! -- in sit333_week3.DateUtilTest
+sit333_week3.DateUtilTest.testJune31IncrementToJuly1 -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.RuntimeException: Invalid day: 31, max day: 30
+	at sit333_week3.DateUtil.<init>(DateUtil.java:23)
+	at sit333_week3.DateUtilTest.testJune31IncrementToJuly1(DateUtilTest.java:265)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+sit333_week3.DateUtilTest.testJune31DecrementToJune30 -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.RuntimeException: Invalid day: 31, max day: 30
+	at sit333_week3.DateUtil.<init>(DateUtil.java:23)
+	at sit333_week3.DateUtilTest.testJune31DecrementToJune30(DateUtilTest.java:121)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
