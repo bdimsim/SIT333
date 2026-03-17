@@ -84,7 +84,7 @@ public class DateUtilTest {
 
 	// 2A
 	@Test
-	public void testJuly2DecrementToJuly1() {
+	public void testJune2DecrementToJune1() {
 		DateUtil date = new DateUtil(2, 6, 1994);
 		System.out.println("june2ShouldDecremementToJune1 > " + date);
 		date.decrement();
