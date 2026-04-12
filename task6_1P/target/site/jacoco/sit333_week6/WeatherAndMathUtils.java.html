@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WeatherAndMathUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">task6_1P</a> &gt; <a href="index.source.html" class="el_package">sit333_week6</a> &gt; <span class="el_source">WeatherAndMathUtils.java</span></div><h1>WeatherAndMathUtils.java</h1><pre class="source lang-java linenums">package sit333_week6;
+
+<span class="fc" id="L3">public class WeatherAndMathUtils {</span>
+	public static final double DANGEROUS_WINDSPEED = 70.0;
+	public static final double DANGEROUS_RAINFALL = 6.0;
+	public static final double CONCERNING_WINDSPEED = 45.0;
+	public static final double CONCERNING_RAINFALL = 4.0;
+
+	// Advises weather alert based on wind-speed and precipitation.
+	public static String weatherAdvice(double windSpeed, double precipitation) {
+<span class="fc bfc" id="L11" title="All 4 branches covered.">		if (windSpeed &lt; 0 || precipitation &lt; 0)</span>
+<span class="fc" id="L12">			throw new IllegalArgumentException(); // Optional: Keep this condition uncovered for P task.</span>
+
+<span class="fc" id="L14">		String advice = &quot;ALL CLEAR&quot;;</span>
+
+<span class="fc bfc" id="L16" title="All 8 branches covered.">		if (windSpeed &gt; DANGEROUS_WINDSPEED </span>
+				|| precipitation &gt; DANGEROUS_RAINFALL
+				|| (windSpeed &gt; CONCERNING_WINDSPEED 
+						&amp;&amp; precipitation &gt; CONCERNING_RAINFALL)) {
+<span class="fc" id="L20">			advice = &quot;CANCEL&quot;;</span>
+<span class="fc bfc" id="L21" title="All 4 branches covered.">		} else if (windSpeed &gt; CONCERNING_WINDSPEED </span>
+				|| precipitation &gt; CONCERNING_RAINFALL) {
+<span class="fc" id="L23">			advice = &quot;WARN&quot;;</span>
+		}
+<span class="fc" id="L25">		return advice;</span>
+	}
+
+	// Calculates if a number is even.
+<span class="fc bfc" id="L29" title="All 2 branches covered.">	public static boolean isEven(int a) { return a % 2 == 0; }</span>
+
+	// Calculates if a number is prime.
+	public static boolean isPrime(int n) {
+<span class="fc bfc" id="L33" title="All 2 branches covered.">		if (n == 1) return true;</span>
+
+		// Test if n is divisible by any other number down to 2.
+<span class="fc bfc" id="L36" title="All 2 branches covered.">		for (int i = 2; i &lt; n; i++)</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">			if (isEven(n))</span>
+<span class="fc" id="L38">				return false;</span>
+		
+		// Number is prime
+<span class="fc" id="L41">		return true;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
