@@ -6,13 +6,20 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 public class WeatherControllerTest {
-	static WeatherController wController;
-	static int nHours;
-	static double[] hourlyTemps;
+	private static WeatherController wController;
+	private static int nHours;
+	private static double[] hourlyTemps;
+	private static double minTemperature;
+	private static double maxTemperature;
+	private static double avgTemperature;
 
 	@BeforeAll
 	public static void setup() {
 		System.out.println("+++ setup +++");
+
+		minTemperature = 1000;
+		maxTemperature = -1;
+		double sumTemperature = 0;
 
 		// Initialise controller
 		wController = WeatherController.getInstance();
@@ -20,9 +27,17 @@ public class WeatherControllerTest {
 		// Retrieve all the hours temperatures recorded as for today
 		nHours = wController.getTotalHours();
 		hourlyTemps = new double[nHours];
+
+		// Hour range: 1 to nHours
 		for (int i = 0; i < nHours; i++) {
 			hourlyTemps[i] = wController.getTemperatureForHour(i + 1);
+
+			double temperatureVal = hourlyTemps[i];
+			if (minTemperature > temperatureVal) minTemperature = temperatureVal;
+			if (maxTemperature < temperatureVal) maxTemperature = temperatureVal;
+			sumTemperature += temperatureVal;
 		}
+		avgTemperature = sumTemperature / nHours;
 	}
 
 	@AfterAll
@@ -48,15 +63,6 @@ public class WeatherControllerTest {
 	@Test
 	public void testTemperatureMin() {
 		System.out.println("+++ testTemperatureMin +++");
-
-		double minTemperature = 1000;
-		for (int i=0; i < nHours; i++) {
-			// Hour range: 1 to nHours
-			double temperatureVal = hourlyTemps[i];
-			if (minTemperature > temperatureVal) {
-				minTemperature = temperatureVal;
-			}
-		}
 		
 		// Should be equal to the min value that is cached in the controller.
 		Assertions.assertEquals(wController.getTemperatureMinFromCache(), minTemperature);	
@@ -65,17 +71,7 @@ public class WeatherControllerTest {
 	@Test
 	public void testTemperatureMax() {
 		System.out.println("+++ testTemperatureMax +++");
-		
-		// Retrieve all the hours temperatures recorded as for today
-		double maxTemperature = -1;
-		for (int i=0; i < nHours; i++) {
-			// Hour range: 1 to nHours
-			double temperatureVal = hourlyTemps[i]; 
-			if (maxTemperature < temperatureVal) {
-				maxTemperature = temperatureVal;
-			}
-		}
-		
+
 		// Should be equal to the min value that is cached in the controller.
 		Assertions.assertEquals(wController.getTemperatureMaxFromCache(), maxTemperature);
 	}
@@ -83,18 +79,9 @@ public class WeatherControllerTest {
 	@Test
 	public void testTemperatureAverage() {
 		System.out.println("+++ testTemperatureAverage +++");
-		
-		// Retrieve all the hours temperatures recorded as for today
-		double sumTemp = 0;
-		for (int i=0; i < nHours; i++) {
-			// Hour range: 1 to nHours
-			double temperatureVal = hourlyTemps[i]; 
-			sumTemp += temperatureVal;
-		}
-		double averageTemp = sumTemp / nHours;
-		
+
 		// Should be equal to the min value that is cached in the controller.
-		Assertions.assertEquals(wController.getTemperatureAverageFromCache(), averageTemp);
+		Assertions.assertEquals(wController.getTemperatureAverageFromCache(), avgTemperature);
 	}
 	
 	@Test
