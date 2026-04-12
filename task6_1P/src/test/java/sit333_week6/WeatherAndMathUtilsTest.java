@@ -50,8 +50,8 @@ public class WeatherAndMathUtilsTest {
 
 	@Test
 	public void testFalseNumberIsPrimeEven() {
-		int prime = 4;
-		Assertions.assertFalse(WeatherAndMathUtils.isPrime(prime));
+		int nonPrime = 4;
+		Assertions.assertFalse(WeatherAndMathUtils.isPrime(nonPrime));
 	}
 
     @Test
