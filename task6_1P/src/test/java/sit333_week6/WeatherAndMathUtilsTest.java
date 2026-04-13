@@ -86,14 +86,14 @@ public class WeatherAndMathUtilsTest {
 
 	@Test
 	public void testThrowsIllegalArgumentExceptionWindSpeedNegative() {
-		assertThrows(IllegalArgumentException.class, () -> {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
 			WeatherAndMathUtils.weatherAdvice(-1, 0);
 		});
 	}
 
 	@Test
 	public void testThrowsIllegalArgumentExceptionPrecipitationNegative() {
-		assertThrows(IllegalArgumentException.class, () -> {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
 			WeatherAndMathUtils.weatherAdvice(0, -1);
 		});
 	}
