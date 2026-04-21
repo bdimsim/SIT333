@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="web.service.LoginServiceUnitTest" time="0.069" tests="7" errors="0" skipped="0" failures="0" flakes="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="web.service.LoginServiceTest" time="14.855" tests="6" errors="0" skipped="0" failures="0" flakes="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -9,14 +9,15 @@
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Australia/Sydney"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.10\bin"/>
-    <property name="sun.java.command" value="C:\msys64\tmp\surefire439281480609086786\surefirebooter-20260422065145049_3.jar C:\msys64\tmp\surefire439281480609086786 2026-04-22T06-51-44_969-jvmRun1 surefire-20260422065145049_1tmp surefire_0-20260422065145049_2tmp"/>
+    <property name="sun.java.command" value="C:\msys64\tmp\surefire1390706852261566430\surefirebooter-20260422074336536_3.jar C:\msys64\tmp\surefire1390706852261566430 2026-04-22T07-43-36_448-jvmRun1 surefire-20260422074336536_1tmp surefire_0-20260422074336536_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="LoginServiceUnitTest.java"/>
+    <property name="test" value="LoginServiceTest.java"/>
     <property name="surefire.test.class.path" value="C:\Users\Brand\Documents\Uni\CS\SIT333\code\task7_1P\webservice1\target\test-classes;C:\Users\Brand\Documents\Uni\CS\SIT333\code\task7_1P\webservice1\target\classes;C:\Users\Brand\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.1.0\jakarta.servlet-api-6.1.0.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-server\11.0.26\jetty-server-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-http\11.0.26\jetty-http-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-util\11.0.26\jetty-util-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-io\11.0.26\jetty-io-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\toolchain\jetty-jakarta-servlet-api\5.0.2\jetty-jakarta-servlet-api-5.0.2.jar;C:\Users\Brand\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-servlet\11.0.26\jetty-servlet-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-security\11.0.26\jetty-security-11.0.26.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.3\junit-jupiter-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.3\junit-jupiter-api-5.14.3.jar;C:\Users\Brand\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Brand\.m2\repository\org\junit\platform\junit-platform-commons\1.14.3\junit-platform-commons-1.14.3.jar;C:\Users\Brand\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.3\junit-jupiter-params-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.3\junit-jupiter-engine-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\platform\junit-platform-engine\1.14.3\junit-platform-engine-1.14.3.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.41.0\selenium-java-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.41.0\selenium-api-4.41.0.jar;C:\Users\Brand\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.41.0\selenium-chrome-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.41.0\selenium-chromium-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.41.0\selenium-json-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.41.0\selenium-manager-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v143\4.41.0\selenium-devtools-v143-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v144\4.41.0\selenium-devtools-v144-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v145\4.41.0\selenium-devtools-v145-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.41.0\selenium-edge-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.41.0\selenium-firefox-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.41.0\selenium-http-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.41.0\selenium-ie-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.41.0\selenium-remote-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\Brand\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Brand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Brand\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Brand\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-api\1.59.0\opentelemetry-api-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-context\1.59.0\opentelemetry-context-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-common\1.59.0\opentelemetry-common-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.59.0\opentelemetry-exporter-logging-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.59.0\opentelemetry-sdk-common-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.59.0\opentelemetry-sdk-extension-autoconfigure-spi-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.59.0\opentelemetry-sdk-extension-autoconfigure-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.59.0\opentelemetry-sdk-trace-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.59.0\opentelemetry-sdk-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.59.0\opentelemetry-sdk-metrics-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.59.0\opentelemetry-sdk-logs-1.59.0.jar;C:\Users\Brand\.m2\repository\net\bytebuddy\byte-buddy\1.18.5\byte-buddy-1.18.5.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.41.0\selenium-os-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.41.0\selenium-safari-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.41.0\selenium-support-4.41.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Brand"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\msys64\tmp\surefire439281480609086786\surefirebooter-20260422065145049_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\msys64\tmp\surefire1390706852261566430\surefirebooter-20260422074336536_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -43,6 +44,7 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\Brand\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="jetty.git.hash" value="7559873b6e46eea7c2c6da2b58327ea2ecf941f4"/>
     <property name="java.io.tmpdir" value="C:\msys64\tmp\"/>
     <property name="java.version" value="21.0.10"/>
     <property name="user.dir" value="C:\Users\Brand\Documents\Uni\CS\SIT333\code\task7_1P\webservice1"/>
@@ -58,11 +60,66 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testDontCareValuesLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.034"/>
-  <testcase name="testLoginSuccess" classname="web.service.LoginServiceUnitTest" time="0.0"/>
-  <testcase name="testNullDobLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.0"/>
-  <testcase name="testInvalidDobFormatLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.0"/>
-  <testcase name="testInvalidDobRangeLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.014"/>
-  <testcase name="testNullUsernameLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.0"/>
-  <testcase name="testNullPasswordLoginFailure" classname="web.service.LoginServiceUnitTest" time="0.0"/>
+  <testcase name="testEmptyDobLoginFailure" classname="web.service.LoginServiceTest" time="2.37">
+    <system-out><![CDATA[Server started!
+Driver info: ChromeDriver: chrome on windows (fdce965aa263bf625ef946d8878c593d)
+[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: bdim, bdim_pass, 
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: fail
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Apr 22, 2026 7:43:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="testLoginSuccess" classname="web.service.LoginServiceTest" time="2.218">
+    <system-out><![CDATA[[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: bdim, bdim_pass, 2002-02-03
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: success
+]]></system-out>
+  </testcase>
+  <testcase name="testEmptyPasswordLoginFailure" classname="web.service.LoginServiceTest" time="2.177">
+    <system-out><![CDATA[[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: bdim, , 2002-02-03
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: fail
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidDobFormatLoginFailure" classname="web.service.LoginServiceTest" time="2.215">
+    <system-out><![CDATA[[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: bdim, bdim_pass, 
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: fail
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidDobRangeLoginFailure" classname="web.service.LoginServiceTest" time="2.206">
+    <system-out><![CDATA[[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: bdim, bdim_pass, 
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: fail
+]]></system-out>
+  </testcase>
+  <testcase name="testEmptyUsernameLoginFailure" classname="web.service.LoginServiceTest" time="2.185">
+    <system-out><![CDATA[[LoginServlet] GET
+[LoginServlet] POST
+Username/password/DoB: , bdim_pass, 2002-02-03
+[RegistrationServlet] GET
+[WelcomeServlet] POST
+Title: fail
+]]></system-out>
+  </testcase>
 </testsuite>

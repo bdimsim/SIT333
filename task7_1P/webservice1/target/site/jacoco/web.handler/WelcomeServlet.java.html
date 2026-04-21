@@ -7,20 +7,20 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-<span class="nc" id="L10">public class WelcomeServlet extends HttpServlet {</span>
+<span class="fc" id="L10">public class WelcomeServlet extends HttpServlet {</span>
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 		throws IOException, ServletException {	
-<span class="nc" id="L14">		System.out.println(&quot;[RegistrationServlet] GET&quot;);</span>
-<span class="nc" id="L15">		doPost(req, resp);</span>
-<span class="nc" id="L16">	}</span>
+<span class="fc" id="L14">		System.out.println(&quot;[RegistrationServlet] GET&quot;);</span>
+<span class="fc" id="L15">		doPost(req, resp);</span>
+<span class="fc" id="L16">	}</span>
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 		throws IOException, ServletException {		
-<span class="nc" id="L21">		System.out.println(&quot;[WelcomeServlet] POST&quot;);</span>
+<span class="fc" id="L21">		System.out.println(&quot;[WelcomeServlet] POST&quot;);</span>
 		// post a message
-<span class="nc" id="L23">		resp.getWriter().println(&quot;Welcome, server is running!&quot;);</span>
-<span class="nc" id="L24">	}</span>
+<span class="fc" id="L23">		resp.getWriter().println(&quot;Welcome, server is running!&quot;);</span>
+<span class="fc" id="L24">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

@@ -9,30 +9,30 @@ import web.handler.WelcomeServlet;
 
 
 // HTTP server. Starts server and registers Java Servlets to URL routes.
-<span class="nc" id="L12">public class MyServer {</span>
-<span class="nc" id="L13">	private static int PORT = 8082;</span>
+<span class="fc" id="L12">public class MyServer {</span>
+<span class="fc" id="L13">	private static int PORT = 8082;</span>
 	
 	public void start() throws Exception {
 		// HTTP server listening on port 8082.
-<span class="nc" id="L17">		Server server = new Server(PORT);</span>
+<span class="fc" id="L17">		Server server = new Server(PORT);</span>
 		
 		// URL routing/mapping handler
-<span class="nc" id="L20">		ServletContextHandler handler = new ServletContextHandler(server, &quot;/&quot;);</span>
+<span class="fc" id="L20">		ServletContextHandler handler = new ServletContextHandler(server, &quot;/&quot;);</span>
 		
 		// Register /login URL path to end-point LoginServlet.
-<span class="nc" id="L23">		handler.addServlet(WelcomeServlet.class, &quot;/&quot;);</span>
+<span class="fc" id="L23">		handler.addServlet(WelcomeServlet.class, &quot;/&quot;);</span>
 		
 		// Register /login URL path to end-point LoginServlet.
-<span class="nc" id="L26">		handler.addServlet(LoginServlet.class, &quot;/login&quot;);</span>
+<span class="fc" id="L26">		handler.addServlet(LoginServlet.class, &quot;/login&quot;);</span>
 		
 		// Register /reg URL path to end-point RegistrationServlet.
-<span class="nc" id="L29">		handler.addServlet(RegistrationServlet.class, &quot;/reg&quot;);</span>
+<span class="fc" id="L29">		handler.addServlet(RegistrationServlet.class, &quot;/reg&quot;);</span>
 		
 		// TODO: Register more servlets for each distinct URL path. 
 		
-<span class="nc" id="L33">		System.out.println(&quot;Server started!&quot;);</span>
-<span class="nc" id="L34">		server.start();</span>
-<span class="nc" id="L35">	}</span>
+<span class="fc" id="L33">		System.out.println(&quot;Server started!&quot;);</span>
+<span class="fc" id="L34">		server.start();</span>
+<span class="fc" id="L35">	}</span>
 
 	public static void main(String[] args) throws Exception {
 <span class="nc" id="L38">		new MyServer().start();</span>

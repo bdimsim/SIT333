@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: web.service.LoginServiceUnitTest
+Test set: web.service.LoginServiceTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s -- in web.service.LoginServiceUnitTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.85 s -- in web.service.LoginServiceTest

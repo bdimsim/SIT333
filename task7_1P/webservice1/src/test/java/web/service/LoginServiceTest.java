@@ -1,6 +1,7 @@
 package web.service;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,25 +28,34 @@ public class LoginServiceTest {
 		}
 	}
 
+	private static void sendDobKeys(WebElement dobField, String dob) {
+		((JavascriptExecutor) driver)
+			.executeScript(
+				"arguments[0].value = arguments[1]", dobField, dob
+			);
+	}
+
 	@BeforeAll
-	public static void setup() {
+	public static void setup() throws Exception{
+		new web.MyServer().start();
+
 		driver = new ChromeDriver();
 		System.out.println("Driver info: " + driver);
+	}
 
+	@BeforeEach
+	public void readyFormState() {
 		driver.navigate().to(
 			"file:///C:/Users/Brand/Documents/Uni/CS/SIT333/code/task7_1P/pages/login.html"
 		);
 
-		sleep(3);
+		sleep(1);
 
 		usernameField = driver.findElement(By.id("username"));
 		passwordField = driver.findElement(By.id("passwd"));
 		dobField = driver.findElement(By.id("dob"));
 		submitButton = driver.findElement(By.cssSelector("[type=submit]"));
-	}
 
-	@BeforeEach
-	public static void clearForm() {
 		usernameField.clear();
 		passwordField.clear();
 		dobField.clear();
@@ -60,40 +70,40 @@ public class LoginServiceTest {
 	public void testLoginSuccess() {
 		usernameField.sendKeys("bdim");
 		passwordField.sendKeys("bdim_pass");
-		dobField.sendKeys("2002-02-03");
+		sendDobKeys(dobField, "2002-02-03");
 		submitButton.submit();
 
 		sleep(1);
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "success");
+		Assertions.assertEquals("success", title);
 	}
 
 	@Test
 	public void testEmptyUsernameLoginFailure() {
 		passwordField.sendKeys("bdim_pass");
-		dobField.sendKeys("2002-02-03");
+		sendDobKeys(dobField, "2002-02-03");
 		submitButton.submit();
 
 		sleep(1);
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "fail");
+		Assertions.assertEquals("fail", title);
 	}
 
 	@Test
 	public void testEmptyPasswordLoginFailure() {
 		usernameField.sendKeys("bdim");
-		dobField.sendKeys("2002-02-03");
+		sendDobKeys(dobField, "2002-02-03");
 		submitButton.submit();
 
 		sleep(1);
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "fail");
+		Assertions.assertEquals("fail", title);
 	}
 
 	@Test
@@ -106,34 +116,34 @@ public class LoginServiceTest {
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "fail");
+		Assertions.assertEquals("fail", title);
 	}
 
 	@Test
 	public void testInvalidDobRangeLoginFailure() {
 		usernameField.sendKeys("bdim"); 
 		passwordField.sendKeys("bdim_pass");
-		dobField.sendKeys("2002-02-29");
+		sendDobKeys(dobField, "2002-02-29");
 		submitButton.submit();
 	
 		sleep(1);
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "fail");
+		Assertions.assertEquals("fail", title);
 	}
 
 	@Test
 	public void testInvalidDobFormatLoginFailure() {
 		usernameField.sendKeys("bdim"); 
 		passwordField.sendKeys("bdim_pass");
-		dobField.sendKeys("abc");
+		sendDobKeys(dobField, "abc");;
 		submitButton.submit();
 	
 		sleep(1);
 
 		String title = driver.getTitle();
 		System.out.println("Title: " + title);
-		Assertions.assertEquals(title, "fail");
+		Assertions.assertEquals("fail", title);
 	}
 }
