@@ -11,8 +11,6 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-// Functional tests for login using selenium. 
-// Also need a unit test class to test the login service logic without using Selenium.
 public class LoginServiceTest {
 	private static WebDriver driver;
 	private static WebElement usernameField;

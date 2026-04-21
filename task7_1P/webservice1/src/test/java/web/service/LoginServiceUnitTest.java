@@ -56,16 +56,16 @@ public class LoginServiceUnitTest {
     }
 
     // Coverage Testing
-    // @Test 
-    // public void testWrongDobLoginFailure() {
-    //     Assertions.assertFalse(
-    //         LoginService.login("bdim", "bdim_pass", "2002-02-04")
-    //     );
-    // }
+    @Test 
+    public void testWrongDobLoginFailure() {
+        Assertions.assertFalse(
+            LoginService.login("bdim", "bdim_pass", "2002-02-04")
+        );
+    }
 
-    // @Test
-    // public void testLoginServiceConstructor() {
-    //     LoginService obj = new LoginService();
-    //     Assertions.assertNotNull(obj);
-    // }
+    @Test
+    public void testLoginServiceConstructor() {
+        LoginService obj = new LoginService();
+        Assertions.assertNotNull(obj);
+    }
 }
