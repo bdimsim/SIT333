@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RegistrationServlet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">webservice1</a> &gt; <a href="index.source.html" class="el_package">web.handler</a> &gt; <span class="el_source">RegistrationServlet.java</span></div><h1>RegistrationServlet.java</h1><pre class="source lang-java linenums">package web.handler;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import web.service.RegistrationService;
+
+
+// HTTP end-point to handle registration request.
+<span class="nc" id="L14">public class RegistrationServlet  extends HttpServlet{</span>
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {	
+<span class="nc" id="L17">		System.out.println(&quot;[RegistrationServlet] GET&quot;);</span>
+<span class="nc" id="L18">		doPost(req, resp);</span>
+<span class="nc" id="L19">	}</span>
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {		
+<span class="nc" id="L23">		System.out.println(&quot;[RegistrationServlet] POST&quot;);</span>
+<span class="nc" id="L24">		String fName = req.getParameter(&quot;fname&quot;);</span>
+<span class="nc" id="L25">		String lName = req.getParameter(&quot;lname&quot;);</span>
+<span class="nc" id="L26">		String email = req.getParameter(&quot;email&quot;);</span>
+<span class="nc" id="L27">		String dob = req.getParameter(&quot;dob&quot;);</span>
+		
+		// Call registration business logic
+<span class="nc" id="L30">		RegistrationService.register(fName, lName, email, dob);</span>
+		
+		// Writes a status ok message: just to test servlet functionality.
+<span class="nc" id="L33">		resp.setContentType(&quot;application/json&quot;);</span>
+<span class="nc" id="L34">		resp.setStatus(HttpServletResponse.SC_OK);				</span>
+<span class="nc" id="L35">		resp.getWriter().println(&quot;{\&quot;status\&quot;: \&quot;ok\&quot;}&quot;);</span>
+<span class="nc" id="L36">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
