@@ -92,12 +92,17 @@ public class WeatherControllerTest {
 		/*
 		 * Remove below comments ONLY for 5.3C task.
 		 */
-		// System.out.println("+++ testTemperaturePersist +++");
+		System.out.println("+++ testTemperaturePersist +++");
 		
-		// String persistTime = wController.persistTemperature(10, 19.5);
-		// String now = new SimpleDateFormat("H:m:s").format(new Date());
-		// System.out.println("Persist time: " + persistTime + ", now: " + now);
+		// Initialise controller
+		WeatherController wController = WeatherController.getInstance();
 		
-		// Assertions.assertEquals(persistTime, now);
+		String persistTime = wController.persistTemperature(10, 19.5);
+		String now = new SimpleDateFormat("H:m:s").format(new Date());
+		System.out.println("Persist time: " + persistTime + ", now: " + now);
+		
+		Assertions.assertEquals(persistTime, now);
+		
+		wController.close();
 	}
 }

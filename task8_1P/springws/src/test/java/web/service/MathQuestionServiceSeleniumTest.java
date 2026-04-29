@@ -35,7 +35,7 @@ public class MathQuestionServiceSeleniumTest {
     @BeforeAll
     public static void login() {
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
     @BeforeEach
@@ -71,7 +71,6 @@ public class MathQuestionServiceSeleniumTest {
         dobField.sendKeys("2002-02-03");
         loginSubmitBtn.click();
 
-
         num1Field = wait.until(
             ExpectedConditions.visibilityOfElementLocated(
                 By.id("number1")
@@ -104,6 +103,42 @@ public class MathQuestionServiceSeleniumTest {
     @AfterAll
     public static void cleanup() {
         driver.close();
+    }
+
+    private void answerQ1Correctly() {
+        num1Field.sendKeys("2.3");
+        num2Field.sendKeys("2.3");
+        usrResult.sendKeys("4.6");
+        mathSubmitBtn.click();
+        
+        // Refind the elements after answering Q1
+        num1Field = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.id("number1")
+            )
+        );
+
+        num2Field = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.id("number2")
+            )
+        );
+
+        usrResult = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.id("result")
+            )
+        );
+
+        mathSubmitBtn = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("[type='submit'][value='Submit']")
+            )
+        );
+
+        num1Field.clear();
+        num2Field.clear();
+        usrResult.clear();
     }
 
     @Test
@@ -214,5 +249,121 @@ public class MathQuestionServiceSeleniumTest {
         String msg = msgText.getText();
         System.out.println("testQ1CorrectAnswerQ2 message: " + msg);
         Assertions.assertEquals("Q1 correct. Proceed to Q2.", msg);
+    }
+
+    @Test
+    public void testQ2EmptyNumber1StayQ2() {
+        answerQ1Correctly();
+        num2Field.sendKeys("2.3");
+        usrResult.sendKeys("2.3");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2EmptyNumber1StayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2EmptyNumber2StayQ2() {
+        answerQ1Correctly();
+        num1Field.sendKeys("2.3");
+        usrResult.sendKeys("2.3");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2EmptyNumber2StayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2EmptyAnswerStayQ2() {
+        answerQ1Correctly();
+        num1Field.sendKeys("2.3");
+        num2Field.sendKeys("2.3");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2EmptyAnswerStayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2NonNumericNumber1StayQ2() {
+        answerQ1Correctly();
+        num1Field.sendKeys("abc");
+        num2Field.sendKeys("2.3");
+        usrResult.sendKeys("2.3");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2NonNumericNumber1StayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2NonNumericNumber2StayQ2() {
+        answerQ1Correctly();
+        num1Field.sendKeys("2.3");
+        num2Field.sendKeys("abc");
+        usrResult.sendKeys("2.3");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2NonNumericNumber2StayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2NonNumericAnswerStayQ2() {
+        answerQ1Correctly();
+        num1Field.sendKeys("2.3");
+        num2Field.sendKeys("2.3");
+        usrResult.sendKeys("abc");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2NonNumericAnswerStayQ2 message: " + msg);
+        Assertions.assertEquals("Q2 incorrect. Try again.", msg);
+    }
+
+    @Test
+    public void testQ2CorrectAnswerQ3() {
+        answerQ1Correctly();
+        num1Field.sendKeys("2.3");
+        num2Field.sendKeys("2.3");
+        usrResult.sendKeys("0.0");
+        mathSubmitBtn.click();
+        msgText = wait.until(
+            ExpectedConditions.visibilityOfElementLocated(
+                By.cssSelector("div")
+            )
+        );
+        String msg = msgText.getText();
+        System.out.println("testQ2CorrectAnswerQ3 message: " + msg);
+        Assertions.assertEquals("Q2 correct. Proceed to Q3.", msg);
     }
 }
