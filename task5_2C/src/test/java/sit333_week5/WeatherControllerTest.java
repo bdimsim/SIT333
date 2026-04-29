@@ -1,7 +1,9 @@
 package sit333_week5;
 
-import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.time.Clock;
+import java.util.Date;
+import java.time.Instant;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Test;
 
 public class WeatherControllerTest {
 	private static WeatherController wController;
+	private static Clock fakeClock;
 	private static int nHours;
 	private static double[] hourlyTemps;
 	private static double minTemperature;
@@ -41,6 +44,14 @@ public class WeatherControllerTest {
 			sumTemperature += temperatureVal;
 		}
 		avgTemperature = sumTemperature / nHours;
+
+		// "Z" means exactly the time as prescribed, regardless of local time
+		// "T" is the separator between date and time
+		// "YYYY-MM-DD" date format
+		Instant fakeInstant = Instant.parse("2026-04-29T10:00:00Z");
+		// Interpret time using system's default time zone
+		fakeClock = Clock.fixed(fakeInstant, Clock.systemDefaultZone().getZone());
+		wController.setClock(fakeClock); // Inject fake clock to controller
 	}
 
 	@AfterAll
@@ -86,18 +97,23 @@ public class WeatherControllerTest {
 		// Should be equal to the min value that is cached in the controller.
 		Assertions.assertEquals(wController.getTemperatureAverageFromCache(), avgTemperature);
 	}
-	
+
 	@Test
 	public void testTemperaturePersist() {
-		/*
-		 * Remove below comments ONLY for 5.3C task.
-		 */
-		// System.out.println("+++ testTemperaturePersist +++");
+		System.out.println("+++ testTemperaturePersist +++");
 		
-		// String persistTime = wController.persistTemperature(10, 19.5);
-		// String now = new SimpleDateFormat("H:m:s").format(new Date());
-		// System.out.println("Persist time: " + persistTime + ", now: " + now);
+		Instant instant = fakeClock.instant();
+		Date date = Date.from(instant);
+		SimpleDateFormat sdf = new SimpleDateFormat("H:m:s");
+		String now = sdf.format(date);
+
+		int hour = instant.atZone(fakeClock.getZone()).getHour();
+		System.out.println("Hour: " + hour);
+
+		String persistTime = wController.persistTemperature(hour, 19.5);
 		
-		// Assertions.assertEquals(persistTime, now);
+		System.out.println("Persist time: " + persistTime + ", now: " + now);
+		
+		Assertions.assertEquals(persistTime, now);
 	}
 }

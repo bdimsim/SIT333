@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: sit333_week5.WeatherControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.14 s -- in sit333_week5.WeatherControllerTest
