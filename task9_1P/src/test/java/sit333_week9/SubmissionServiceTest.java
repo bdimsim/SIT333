@@ -76,17 +76,17 @@ public class SubmissionServiceTest {
         Assertions.assertEquals(SubmissionStatus.ON_TIME, status);
     }
 
-    @Test
-    public void testBuildFailure() {
-        Submission submission = new Submission(
-            "assignment.pdf",
-            10,
-            LocalDateTime.of(2026, 5, 14, 12, 0),
-            LocalDateTime.of(2026, 5, 14, 23, 59)
-        );
+    // @Test
+    // public void testBuildFailure() {
+    //     Submission submission = new Submission(
+    //         "assignment.pdf",
+    //         10,
+    //         LocalDateTime.of(2026, 5, 14, 12, 0),
+    //         LocalDateTime.of(2026, 5, 14, 23, 59)
+    //     );
 
-        SubmissionStatus status = SubmissionService.validate(submission); // On time submission
-         // Check against wrong expectation to demonstrate build failure
-        Assertions.assertEquals(SubmissionStatus.ON_LATE, status);
-    }
+    //     SubmissionStatus status = SubmissionService.validate(submission); // On time submission
+    //      // Check against wrong expectation to demonstrate build failure
+    //     Assertions.assertEquals(SubmissionStatus.ON_LATE, status);
+    // }
 } 

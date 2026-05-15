@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: sit333_week6.GradeServiceTest
+-------------------------------------------------------------------------------
+Tests run: 41, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.106 s -- in sit333_week6.GradeServiceTest
