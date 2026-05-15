@@ -1,0 +1,7 @@
+# Created at 2026-05-15T06:58:49.799
+TestEngine with ID 'junit-jupiter' encountered a critical issue during test discovery:
+
+(1) [ERROR] @AfterAll method 'public void sit333_week9.SubmissionServiceTest.cleanup()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+    Source: MethodSource [className = 'sit333_week9.SubmissionServiceTest', methodName = 'cleanup', methodParameterTypes = '']
+            at sit333_week9.SubmissionServiceTest.cleanup(SourceFile:0)
+
