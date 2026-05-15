@@ -21,6 +21,6 @@ jobs:
         java-version: '21'
         cache: maven
 
-    - name: Run tests for Task 9
+    - name: Run tests for Task 9_1P
       working-directory: task9_1P
       run: mvn clean test
