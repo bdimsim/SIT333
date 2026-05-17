@@ -1,0 +1,7 @@
+web\handler\WelcomeServlet.class
+web\handler\RegistrationServlet.class
+web\service\LoginService.class
+web\service\MyServer.class
+web\handler\LoginServlet.class
+web\service\RegistrationService.class
+web\model\User.class

@@ -1,0 +1,4 @@
+web\service\RegistrationServiceUnitTest.class
+web\service\LoginServiceUnitTest.class
+web\service\LoginServiceFunctionalTest.class
+web\service\RegistrationServiceFunctionalTest.class
