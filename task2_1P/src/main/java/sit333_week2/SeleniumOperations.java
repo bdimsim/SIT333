@@ -40,6 +40,7 @@ public class SeleniumOperations {
 		// Open up a chromium browser.
 		System.out.println("Fire up chrome browser.");
 		WebDriver driver = new ChromeDriver(); // Upcast chromedriver class to webdriver interface
+		driver.manage().window().maximize();
 		System.out.println("Driver info: " + driver);
 
 		sleep(2);
@@ -57,7 +58,7 @@ public class SeleniumOperations {
 		findElementByIdSendKeys(driver, "email", "bdimoski@deakin.edu.au");
 		// Send password
 		findElementByIdSendKeys(driver, "password", "Task2.1PBrandon");
-		// NOTE: Confirmation password is blank
+		findElementByIdSendKeys(driver, "confirmPassword", "wrong_password");
 
 		// Identify button 'Create account' and click to submit using Selenium API.
 		WebElement element = driver.findElement(By.cssSelector("[data-testid='account-action-btn']"));
@@ -79,7 +80,7 @@ public class SeleniumOperations {
 		sleep(2);
 
 		// close chrome driver
-		driver.close();
+		driver.quit();
 	}
 
 	public static void culturekings_registration_page(String url) {
@@ -123,6 +124,54 @@ public class SeleniumOperations {
 		sleep(2);
 
 		// close chrome driver
-		driver.close();
+		driver.quit();
+	}
+
+	public static void pintrest_registration_page(String url) {
+		System.out.println("Fire up chrome browser.");
+		WebDriver driver = new ChromeDriver();
+		System.out.println("driver info: " + driver);
+		driver.manage().window().maximize();
+
+		sleep(2);
+
+		driver.get(url);
+
+		sleep(2);
+
+		WebElement element = driver.findElement(
+			By.cssSelector(
+				"[data-test-id='join-pinterest-button-homepage-redesign-top-module']"
+			)
+		);
+		
+		element.click();
+
+		sleep(1);
+
+		// Send email
+		findElementByIdSendKeys(driver, "email", "bdimoski@deakin.edu.au");
+		// Send password
+		findElementByIdSendKeys(driver, "password", "abc");
+		// Send DoB
+		findElementByIdSendKeys(driver, "birthdate", "03022002");
+
+		element = driver.findElement(
+			By.cssSelector(
+				"[data-test-id='registerFormSubmitButton'] button"
+			)
+		);
+
+		element.click();
+
+		sleep(2);
+
+		takeScreenshot(driver, "task2_1P/screenshots/pintrest-registration-screenshot.png");
+
+		// Sleep a while
+		sleep(2);
+
+		// close chrome driver
+		driver.quit();
 	}
 }

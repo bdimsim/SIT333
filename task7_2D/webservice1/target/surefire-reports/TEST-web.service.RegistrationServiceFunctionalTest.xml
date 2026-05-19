@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="web.service.RegistrationServiceFunctionalTest" time="15.054" tests="6" errors="0" skipped="0" failures="0" flakes="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="web.service.RegistrationServiceFunctionalTest" time="34.092" tests="7" errors="1" skipped="0" failures="0" flakes="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="AU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.10\bin"/>
-    <property name="sun.java.command" value="C:\msys64\tmp\surefire14783655121920649799\surefirebooter-20260517123856117_3.jar C:\msys64\tmp\surefire14783655121920649799 2026-05-17T12-38-56_022-jvmRun1 surefire-20260517123856117_1tmp surefire_0-20260517123856117_2tmp"/>
+    <property name="sun.java.command" value="C:\msys64\tmp\surefire15386922435849417993\surefirebooter-20260517172340833_3.jar C:\msys64\tmp\surefire15386922435849417993 2026-05-17T17-23-40_743-jvmRun1 surefire-20260517172340833_1tmp surefire_0-20260517172340833_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="RegistrationServiceFunctionalTest.java"/>
     <property name="surefire.test.class.path" value="C:\Users\Brand\Documents\Uni\CS\SIT333\code\task7_2D\webservice1\target\test-classes;C:\Users\Brand\Documents\Uni\CS\SIT333\code\task7_2D\webservice1\target\classes;C:\Users\Brand\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.1.0\jakarta.servlet-api-6.1.0.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-server\11.0.26\jetty-server-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-http\11.0.26\jetty-http-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-util\11.0.26\jetty-util-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-io\11.0.26\jetty-io-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\toolchain\jetty-jakarta-servlet-api\5.0.2\jetty-jakarta-servlet-api-5.0.2.jar;C:\Users\Brand\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-servlet\11.0.26\jetty-servlet-11.0.26.jar;C:\Users\Brand\.m2\repository\org\eclipse\jetty\jetty-security\11.0.26\jetty-security-11.0.26.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.3\junit-jupiter-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.3\junit-jupiter-api-5.14.3.jar;C:\Users\Brand\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Brand\.m2\repository\org\junit\platform\junit-platform-commons\1.14.3\junit-platform-commons-1.14.3.jar;C:\Users\Brand\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.3\junit-jupiter-params-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.3\junit-jupiter-engine-5.14.3.jar;C:\Users\Brand\.m2\repository\org\junit\platform\junit-platform-engine\1.14.3\junit-platform-engine-1.14.3.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-java\4.41.0\selenium-java-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-api\4.41.0\selenium-api-4.41.0.jar;C:\Users\Brand\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.41.0\selenium-chrome-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.41.0\selenium-chromium-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-json\4.41.0\selenium-json-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.41.0\selenium-manager-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v143\4.41.0\selenium-devtools-v143-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v144\4.41.0\selenium-devtools-v144-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v145\4.41.0\selenium-devtools-v145-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.41.0\selenium-edge-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.41.0\selenium-firefox-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-http\4.41.0\selenium-http-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.41.0\selenium-ie-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.41.0\selenium-remote-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\Brand\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\Brand\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Brand\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\Brand\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-api\1.59.0\opentelemetry-api-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-context\1.59.0\opentelemetry-context-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-common\1.59.0\opentelemetry-common-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.59.0\opentelemetry-exporter-logging-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.59.0\opentelemetry-sdk-common-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.59.0\opentelemetry-sdk-extension-autoconfigure-spi-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.59.0\opentelemetry-sdk-extension-autoconfigure-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.59.0\opentelemetry-sdk-trace-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.59.0\opentelemetry-sdk-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.59.0\opentelemetry-sdk-metrics-1.59.0.jar;C:\Users\Brand\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.59.0\opentelemetry-sdk-logs-1.59.0.jar;C:\Users\Brand\.m2\repository\net\bytebuddy\byte-buddy\1.18.5\byte-buddy-1.18.5.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-os\4.41.0\selenium-os-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.41.0\selenium-safari-driver-4.41.0.jar;C:\Users\Brand\.m2\repository\org\seleniumhq\selenium\selenium-support\4.41.0\selenium-support-4.41.0.jar;"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\msys64\tmp\surefire14783655121920649799\surefirebooter-20260517123856117_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\msys64\tmp\surefire15386922435849417993\surefirebooter-20260517172340833_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testEmptyEmailFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.353">
+  <testcase name="testEmptyEmailFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.365">
     <system-out><![CDATA[Server started!
 [RegistrationServlet] POST
 first_name/last_name/email/password/DoB: brandon, dimoski, , bdim_pass, 2002-02-03
@@ -71,11 +71,11 @@ Title: fail
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-May 17, 2026 12:38:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 17, 2026 5:23:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 148, returning the closest version; found: 145; Please update to a Selenium version that supports CDP version 148
 ]]></system-err>
   </testcase>
-  <testcase name="testEmptyFirstNameFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.306">
+  <testcase name="testEmptyFirstNameFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.29">
     <system-out><![CDATA[[RegistrationServlet] POST
 first_name/last_name/email/password/DoB: , dimoski, bdimoski@deakin.edu.au, bdim_pass, 2002-02-03
 [RegistrationServlet] GET
@@ -83,7 +83,7 @@ first_name/last_name/email/password/DoB: , dimoski, bdimoski@deakin.edu.au, bdim
 Title: fail
 ]]></system-out>
   </testcase>
-  <testcase name="testEmptyLastNameFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.307">
+  <testcase name="testEmptyLastNameFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.273">
     <system-out><![CDATA[[RegistrationServlet] POST
 first_name/last_name/email/password/DoB: brandon, , bdimoski@deakin.edu.au, bdim_pass, 2002-02-03
 [RegistrationServlet] GET
@@ -91,7 +91,7 @@ first_name/last_name/email/password/DoB: brandon, , bdimoski@deakin.edu.au, bdim
 Title: fail
 ]]></system-out>
   </testcase>
-  <testcase name="testEmptyDoBFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.311">
+  <testcase name="testEmptyDoBFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.32">
     <system-out><![CDATA[[RegistrationServlet] POST
 first_name/last_name/email/password/DoB: brandon, dimoski, bdimoski@deakin.edu.au, bdim_pass, 
 [RegistrationServlet] GET
@@ -99,7 +99,7 @@ first_name/last_name/email/password/DoB: brandon, dimoski, bdimoski@deakin.edu.a
 Title: fail
 ]]></system-out>
   </testcase>
-  <testcase name="testEmptyPasswordFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.351">
+  <testcase name="testEmptyPasswordFailure" classname="web.service.RegistrationServiceFunctionalTest" time="2.322">
     <system-out><![CDATA[[RegistrationServlet] POST
 first_name/last_name/email/password/DoB: brandon, dimoski, bdimoski@deakin.edu.au, , 2002-02-03
 [RegistrationServlet] GET
@@ -107,12 +107,57 @@ first_name/last_name/email/password/DoB: brandon, dimoski, bdimoski@deakin.edu.a
 Title: fail
 ]]></system-out>
   </testcase>
-  <testcase name="testValidRegistrationSuccessul" classname="web.service.RegistrationServiceFunctionalTest" time="2.333">
-    <system-out><![CDATA[[RegistrationServlet] POST
-first_name/last_name/email/password/DoB: brandon, dimoski, bdimoski@deakin.edu.au, bdim_pass, 2002-02-03
-[RegistrationServlet] GET
-[WelcomeServlet] POST
-Title: success
-]]></system-out>
+  <testcase name="testValidRegistrationSuccessul" classname="web.service.RegistrationServiceFunctionalTest" time="21.271">
+    <error message="invalid session id: session deleted as the browser has closed the connection&#10;from disconnected: not connected to DevTools&#10;  (Session info: chrome=148.0.7778.168)&#10;Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [93bef4d10131152893fdd67151efb83e, submitElement {id=f.DE0A66D5E23E649349D5B6EEA6CA132E.d.8C83531149FB18B17A7B763251C17DF4.e.15}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\msys64\tmp\scoped_dir408...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59689}, goog:processID: 9804, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59689/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (93bef4d10131152893fdd67151efb83e)] -&gt; css selector: [type=submit]]&#10;Session ID: 93bef4d10131152893fdd67151efb83e" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[org.openqa.selenium.NoSuchSessionException: 
+invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.168)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93bef4d10131152893fdd67151efb83e, submitElement {id=f.DE0A66D5E23E649349D5B6EEA6CA132E.d.8C83531149FB18B17A7B763251C17DF4.e.15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\msys64\tmp\scoped_dir408...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59689}, goog:processID: 9804, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59689/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (93bef4d10131152893fdd67151efb83e)] -> css selector: [type=submit]]
+Session ID: 93bef4d10131152893fdd67151efb83e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.submit(RemoteWebElement.java:82)
+	at web.service.RegistrationServiceFunctionalTest.testValidRegistrationSuccessul(RegistrationServiceFunctionalTest.java:165)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
+  </testcase>
+  <testcase name="" classname="web.service.RegistrationServiceFunctionalTest" time="34.092">
+    <error message="invalid session id&#10;Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [93bef4d10131152893fdd67151efb83e, close {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\msys64\tmp\scoped_dir408...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59689}, goog:processID: 9804, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59689/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 93bef4d10131152893fdd67151efb83e" type="org.openqa.selenium.NoSuchSessionException"><![CDATA[org.openqa.selenium.NoSuchSessionException: 
+invalid session id
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [93bef4d10131152893fdd67151efb83e, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\msys64\tmp\scoped_dir408...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59689}, goog:processID: 9804, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59689/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93bef4d10131152893fdd67151efb83e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:686)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:690)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:477)
+	at web.service.RegistrationServiceFunctionalTest.cleanup(RegistrationServiceFunctionalTest.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+]]></error>
   </testcase>
 </testsuite>
